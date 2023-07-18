@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MRI 50/50 Raffle Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle home-logo" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-home"></i>Home <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item home-item" href="/">Home</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown home-item" href="/raffle">50/50 Raffle</a>
+                        <a class="dropdown home-item" href="/moveAThon">Move-A-Thon</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#events">EVENTS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron text-center">
+        <h1>MRI Intern Fundraising</h1>
+    </div>
+
+    <!--About section-->
+    <div id="about" class="container-fluid bg-grey">
+        <h1 class="black_text">About</h1>
+        <big>
+            <p>
+                The intern class of 2023 will be raising money for three amzing causes.
+                Each cause is supported by one of three teams made up of the Pride's 2023 interns.
+                Our collective goal is to raise $10,000 for the MRI Software Foundation.
+            </p>
+        </big>
+    </div>
+    <div class="container-fluid">
+        <h1 class="black_text">Team Charaties</h1>
+        <br />
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <h2>Team Golden Hearts</h2>
+                <h4>Supporting the Meals of Hope Organization</h4>
+                <br />
+                <p>
+                    An organization that has packed over 80 million shelf stable
+                    meals that are donated to communities both in the US an globally.
+                </p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Campaign Crusaders</h2>
+                <h4>Supporting the Cleveland Chapter of Boys and Girls Club of America </h4>
+                <p>
+                    Provides a safe place for children in pverty to learn and grow, surrponding them
+                    with caring mentors.
+                </p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Back On Our Paws</h2>
+                <h4>Supporting the Back on My Feet Organization</h4>
+                <br />
+                <p>
+                    Combats homelesness through the power of fitness, community support and
+                    essential employment and housing resources.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Event section-->
+    <div class="container-fluid bg-grey" id="events">
+        <h1 class="black_text">Events</h1>
+        <br />
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <h2>50/50 Raffle</h2>
+                <p class="black_text">Raffle will run from 9AM July 24th until noon July 28th</p>
+                <p class="text-left">
+                    The intern class of 2023 is hosting a 50/50 raffle, raising money
+                    for three amazing causes on behalf of the MRI Software Foundation.
+                    The grand prize will be split down the middle, and half will be donated
+                    to an organization, while the other half is given to one of our lucky
+                    ticket holders!
+                </p>
+                <a href="/raffle" class="button infoButton">More information here</a>
+            </div>
+            <div class="col-sm-6 text-center">
+                <h2>Move-A-Thon</h2>
+                <p class="black_text"> August 5th </p>
+                <p class="text-left">
+                    Sponsor a participant as they pledge to walk or run for donations
+                    to their teams' organization! You can also join as a participant, by
+                    purchasing a ticket for $25!
+                </p>
+                <br />
+                <a href="/moveAThon" class="button infoButton">More information here</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact section-->
+    <div class="container-fluid" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center"> Feel free to reach out via email or teams message:</p>
+        <p class="text-center">Communications: Emilee Trudeau, Cammy Oliveri, Shannon Fitzpatrick </p>
+        <p class="text-center">Events: Matthew Walker,  Emmeline Pearson, Alec Orrell</p>
+        <p class="text-center">Finance: Evan Avelluto, Jessica Sternal, Ryan Vogel  </p>
+    </div>
+
+
+</body>
+
+
+</html>  

@@ -1,0 +1,128 @@
+﻿body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+
+h2 {
+    font-size: 24px;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.iframe_center {
+    margin: 0 auto;
+    display: block;
+}
+
+.jumbotron {
+    background-color: #02075d;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+
+.home-logo {
+    background-color: #02075d !important;
+    font-size: 12px !important;
+    letter-spacing: 4px;
+    color: #fff !important;
+}
+
+.home-logo:hover {
+    background-color: white;
+    color: #02075d;
+}
+
+.home-item {
+    border-radius: 0px !important;
+    color: #02075d;
+    margin-left: 5px;
+    text-decoration: none !important;
+}
+.black_text{
+    color: black !important;
+}
+.home-item:hover {
+    border-radius: 0px !important;
+    color: #02075d;
+    background-color: lightgrey;
+}
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #02075d;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #02075d !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+.infoButton {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #02075d;
+    text-decoration: none !important;
+}
+.infoButton:hover {
+    background-color: #02075d;
+    color: white;
+}

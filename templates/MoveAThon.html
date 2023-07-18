@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MRI 50/50 Raffle Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle home-logo" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-home"></i>Home <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item home-item" href="/">Home</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown home-item" href="/raffle">50/50 Raffle</a>
+                        <a class="dropdown home-item" href="/moveAThon">Move-A-Thon</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#registration">REGISTRATION</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron text-center">
+        <h1>Move-A-Thon</h1>
+    </div>
+
+    <!--About section-->
+    <div id="about" class="container-fluid">
+        <h1 class="black_text">About</h1>
+        <p class="text-left">
+            Sponsor a participant as they pledge to walk or run for donations
+            to their teams' organization! You can also join as a participant, by
+            purchasing a ticket for $25!
+        </p>
+    </div>
+    <div id="about" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <h2>Location:</h2>
+                <h4>TBD</h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Date:</h2>
+                <h4>August 5th, 9am - 11am</h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Additional Info:</h2>
+                <h4>Food truck TBD</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Registration section-->
+    <div class="container-fluid" id="registration">
+        <h2 class="text-center">Please register using the form below</h2>
+        <br />
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSewIEAJ3y0ifOSDlHmfDF7MT-mgwyIsnadSbMNh7_usn6dBug/viewform?embedded=true" class="iframe_center" width="640" height="755" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+
+    <!--Contact section-->
+    <div class="container-fluid bg-grey" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center"> Feel free to reach out via email or teams message:</p>
+        <p class="text-center">Communications: Emilee Trudeau, Cammy Oliveri, Shannon Fitzpatrick </p>
+        <p class="text-center">Events: Matthew Walker,  Emmeline Pearson, Alec Orrell</p>
+        <p class="text-center">Finance: Evan Avelluto, Jessica Sternal, Ryan Vogel  </p>
+    </div>
+
+
+</body>
+
+
+</html>  

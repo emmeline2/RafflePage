@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MRI 50/50 Raffle Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle home-logo" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-home"></i>Home <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item home-item" href="/">Home</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown home-item" href="/raffle">50/50 Raffle</a>
+                        <a class="dropdown home-item" href="/moveAThon">Move-A-Thon</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#tickets">PURCHASE TICKETS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron text-center">
+        <h1>50/50 Raffle</h1>
+    </div>
+
+    <!--About section-->
+    <div id="about" class="container-fluid">
+        <h1 class="black_text">About</h1>
+        <p class="text-left">
+            The intern class of 2023 is hosting a 50/50 raffle, raising money
+            for three amazing causes on behalf of the MRI Software Foundation.
+            The grand prize will be split down the middle, and half will be donated
+            to an organization, while the other half is given to one of our lucky
+            ticket holders!
+        </p>
+        <p class="black_text">Raffle will run from 9AM July 24th until noon July 28th</p>
+    </div>
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <h2>Current number of tickets Purchased:</h2>
+                <h4>0 tickets</h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Winning amount:</h2>
+                <h4>0$</h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h2>Time Remaining until July 28th:</h2>
+                <h4 id="demo"></h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Ticket section-->
+    <div class="container-fluid" id="tickets">
+        <h2 class="text-center">Please fill out the form below to purchase tickets</h2>
+        <br />
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_wXZQrB9oK_id6h30XE1FuxMmRaDGwdhAnLARVpWyeHHPxA/viewform?embedded=true" class="iframe_center" width="640" height="878" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+
+    <!--Contact section-->
+    <div class="container-fluid bg-grey" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center"> Feel free to reach out via email or teams message:</p>
+        <p class="text-center">Communications: Emilee Trudeau, Cammy Oliveri, Shannon Fitzpatrick </p>
+        <p class="text-center">Events: Matthew Walker,  Emmeline Pearson, Alec Orrell</p>
+        <p class="text-center">Finance: Evan Avelluto, Jessica Sternal, Ryan Vogel  </p>
+    </div>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 28, 2023 12:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+
+</html>  
